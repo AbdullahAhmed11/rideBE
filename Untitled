@@ -1,0 +1,14 @@
+# Copy to .env and fill in values. Never commit .env.
+
+PORT=4000
+NODE_ENV=development
+
+# MongoDB Atlas (include database name in path), e.g.
+# mongodb+srv://USER:PASSWORD@cluster.example.mongodb.net/ride?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://abdullah77zzx_db_user:5cygj79Uu2glDIxC@cluster0.r5xdd4i.mongodb.net/?appName=Cluster0
+
+# Used to sign JWTs — use a long random string in production
+JWT_SECRET=e211dbdbe6ee7a1304a78a32b254b207eb322075807b63649c2d4b7934d939062c76b0e81b9ca5ecca9e0dc6c0c181a4c18307e98f3f820408ef3249dacc377f
+
+# Comma-separated browser origins for CORS (Vite dashboard, Expo web, etc.)
+CLIENT_ORIGINS=http://localhost:5173,http://localhost:8081
