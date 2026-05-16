@@ -5,8 +5,8 @@
   "description": "Ride API — Express + MongoDB (MERN backend)",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon",
-    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --pretty",
     "start": "node dist/index.js"
   },
   "engines": {
