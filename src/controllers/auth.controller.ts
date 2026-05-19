@@ -86,11 +86,11 @@ export async function loginUser(req: Request, res: Response): Promise<void> {
   assertValidEgyptE164(phoneNorm);
 
   const user = await User.findOne({ phone: phoneNorm });
-  if (!user || user.role !== "user") {
+  if (!user || (user.role !== "user" && user.role !== "admin")) {
     throw new AppError("User not found for this phone number", 404, "USER_NOT_FOUND");
   }
 
-  const token = signToken(user.id, "user");
+  const token = signToken(user.id, user.role);
   res.json({
     token,
     user: serializeUserDoc(user.toObject(), req),
